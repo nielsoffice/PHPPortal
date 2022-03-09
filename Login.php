@@ -161,13 +161,6 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   **/ 
 _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
  
- $user_login_attr  = [
-   
-   [],
-   []
-
- ];  
-
  $user_login           =  FORM::LABEL('label-id-un'  , 'Username/Email/Mobile') . __BR()
                          .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'],['username',(($_COOKIE['username'])?? (( $username )?? '')) ]] );
 
