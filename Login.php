@@ -161,14 +161,14 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   **/ 
 _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
  
- $user_login           =  FORM::LABEL('label-id-un'  , 'Username/Email/Mobile') . __BR()
-                         .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'],['username',(($_COOKIE['username'])?? (( $username )?? '')) ]] );
+ $user_login           =  FORM::LABEL('label-id-un','Username/Email/Mobile') . __BR()
+                         .FORM::TEXT('id-username','class-username',[['name','value'],['username',(($_COOKIE['username'])?? (( $username )?? '')) ]] );
 
- $user_password        =  FORM::LABEL('label-id-un'    , 'Password'        ) . __BR()
-                         .FORM::PASSWORD('id-username' , 'class-username'  , [['name','value'],['password',(($_COOKIE['password'])?? (( $password )?? '')) ]] );
+ $user_password        =  FORM::LABEL('label-id-un','Password') . __BR()
+                         .FORM::PASSWORD('id-username','class-username',[['name','value'],['password',(($_COOKIE['password'])?? (( $password )?? '')) ]] );
 
- $user_remember        =  FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name',''],['remember',(isset($_COOKIE["username"])) ? 'checked' : false ]] ) 
-                         .FORM::LABEL('label-id-un' , 'Remember me'    );
+ $user_remember        =  FORM::CHECKBOX('checkbox','class-checkbox',[['name',''],['remember',(isset($_COOKIE["username"])) ? 'checked' : false ]] ) 
+                         .FORM::LABEL('label-id-un','Remember me');
                   
  $user_submit_btn      = ELEM( 'div' , FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']] ) 
                   
