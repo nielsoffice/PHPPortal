@@ -212,13 +212,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  _FORM( attr : setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
 
   $user_name           = FORM::LABEL('label-id-un' , 'Username'       ) . __BR()
-                        .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', (is_null($catch_un = '')?? $username)]]); 
+                        .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', ($catch_un?? ($username?? ''))]]); 
 
   $user_email          = FORM::LABEL('label-id-e'  , 'Email' ) . __BR()
-                        .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  (is_null($catch_ue = '')?? $email)]]);
+                        .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  ($catch_ue?? ( $email?? ''))]]);
 
   $user_mobile         = FORM::LABEL('label-id-m'  , 'Mobile' ) . __BR()
-                        .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', (is_null($catch_um = '')?? $mobile)]] );
+                        .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', ($catch_um?? ($mobile?? ''))]] );
 
   $user_password       = FORM::LABEL('label-id-p'   , 'Password' ) . __BR()
                         .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]);
